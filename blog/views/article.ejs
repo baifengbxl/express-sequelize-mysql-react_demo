@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>title</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+      body{
+          margin: 0;
+          padding: 0;
+      }
+      table {
+          margin: 100px auto;
+          border-collapse: collapse;
+          width: 300px;
+          height: 100px;
+
+      }
+
+      table, td, th {
+          border: 1px solid black;
+          text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption><h1>mysql数据获取</h1></caption>
+      <tr>
+          <th>id</th>
+          <th>title</th>
+          <th>context</th>
+      </tr>
+      <% for(var i=0;i<data.length;i++){ %>
+      <tr>
+          <td><%= data[i].id %></td>
+          <td><%= data[i].title %></td>
+          <td><%= data[i].context %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
